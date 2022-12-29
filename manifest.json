@@ -1,0 +1,38 @@
+{
+    "name": "AWS Elastic Beanstalk Environment keys automator",
+    "version": "1.0.0",
+    "description": "This extension allows you to avoid the tedious task of manually adding and updating your AWS Elastic Beanstalk env secrets each time. Import or export the secrets of your environment easily automatically.",
+    "manifest_version": 3,
+    "locale": "en",
+    "incognito": "spanning",
+    "author": "Juan España",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "AWS Elastic Beanstalk Environment keys automator"
+    },
+    "icons": {
+        "525": "512.png"
+      },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+U",
+                "mac": "Command+U"
+            }
+        }
+    },
+    "background":{
+        "service_worker":"background.js"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [ {
+        "js": ["tailwind.js"],
+        "matches":["<all_urls>"]
+    }],
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs",
+        "declarativeContent"
+    ]
+}

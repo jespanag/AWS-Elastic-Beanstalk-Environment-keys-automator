@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Elastic Beanstalk Environment keys automator</title>
+    <script src="tailwind.js"></script>
+</head>
+
+<body class="w-80">
+    <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+
+        <div class="px-2 py-2 sm:px-6">
+            <h3 class="text-sm font-medium leading-6 text-orange-600"">Author</h3>
+            <div class="flex mt-2">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://media.licdn.com/dms/image/C4D03AQEFGSqjaZEOXQ/profile-displayphoto-shrink_800_800/0/1600631285987?e=2147483647&v=beta&t=VT0OFmn-2V0iVG1_CXZoVzN6P9EUG_mR6oZHufAAsWw" alt="">
+                <p class="ml-2 mt-1.5 text-sm">Juan España</p>
+
+                <a target="_blank" href="https://www.linkedin.com/in/juan-alberto-espa%C3%B1a-garcia/"><svg class="ml-3 mt-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" ><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+
+
+                <a target="_blank" href="https://www.linkedin.com/in/juan-alberto-espa%C3%B1a-garcia/"><svg class="ml-3 mt-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+
+
+            </div>
+          </div>
+        <div class="px-2 py-2 sm:px-6">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">AWS Elastic Beanstalk Environment keys automator</h3>
+          <p class="mt-1 max-w-2xl text-xs text-gray-500">This extension is local, does not connect to any network and keeps secrets safe at all times.</p>
+        </div>
+        <div class="border-t border-gray-200">
+          <dl>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Status</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Running...</dd>
+            </div>
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Detected keys</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <span class="px-4 py-2 rounded-full text-green-500 bg-gray-200 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                 <span id="detectedNum">wait...</span>
+              </span>
+            </dd>
+            </div>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Import your .env</dt>
+              <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <div class="flex w-full flex-1 items-center">
+                  <label class="block">
+                    <span class="sr-only">Choose File</span>
+                    <input type="file" id="env-selector" class="block w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-600 hover:file:bg-orange-100" />
+                  </label>
+                </div>
+                <p class="text-xs mt-2 ml-2 text-gray-500">Only <b>.env</b> or <b>.txt</b> files with the next format <code class="text-orange-600">key=value[new line]</code></p>
+                <div class="px-4 py-6 hidden" id="import-action">
+                  <div class="flex">
+                    <div class="flex items-center h-5">
+                        <input id="replace-checkbox" aria-describedby="replace-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-orange-600 bg-gray-100 rounded border-gray-300 focus:ring-orange-500 focus:ring-orange-600 ring-offset-gray-800 focus:ring-2 accent-orange-600">
+                    </div>
+                    <div class="ml-2 text-sm">
+                        <label for="replace-checkbox" class="font-medium text-gray-900">Keep existing keys</label>
+                        <p id="replace-checkbox-text" class="text-xs font-normal text-gray-500">It will add the variables of the file from the current ones, if you uncheck this option the file will replace all the current variables.</p>
+                    </div>
+                  </div>
+                  <button id="import" type="button" class="mt-3 text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+                    Import
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                </div>
+              </dd>
+            </div>
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Exports</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
+                  <li id="export-action" class="flex items-center justify-between py-3 pl-3 pr-4 text-sm opacity-30 pointer-events-none"">
+                    <div class="flex w-0 flex-1 items-center">
+                      <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="ml-2 w-0 flex-1 truncate">ebs_secrets.env</span>
+                    </div>
+                    <div class="ml-4 flex-shrink-0">
+                      <button id="export" class="font-medium text-orange-600 hover:text-orange-500">Export</button>
+                    </div>
+                  </li>
+                 
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      
+
+</body>
+<script src="script.js"></script>
+
+</html>

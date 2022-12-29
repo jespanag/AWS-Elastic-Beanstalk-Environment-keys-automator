@@ -1,3 +1,7 @@
+Chrome extension to bulk edit environment variables in amazon web services elastic beanstalk.
+
+![img](https://i.ibb.co/dWRYDLz/image.png)
+
 ## WHY?
 
 In AWS Elastic Beanstalk there are some ways to upload the secrets from code, but those who want to do it from the interface have a section for it, unfortunately this interface does not have bulk edit, if you have 130 variables you must copy and paste KEY/VALUE 260 times to hand, and then in each update check if they are up-to-date.
